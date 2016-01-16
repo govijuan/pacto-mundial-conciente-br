@@ -1,0 +1,73 @@
+/*
+Theme Name: Pacto Mundial Conciente
+Theme URI: http://jccriacaodesites.com.br
+Author: Juan Carlos Coral (Govinda Sundaram Das)
+Author URI: http://wordpress.org/
+Description: Tema creado específicamente para o site do Pacto Mundial Concsiente no Brasil.
+Version: 1.0
+Text Domain:
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+
+
+
+
+
+
+/* Eric Meyer's Reset CSS v2.0 - http://cssreset.com */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{border:0;font-size:100%;font:inherit;vertical-align:baseline;margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}table{border-collapse:collapse;border-spacing:0}
+
+
+
+/* Estilo para o layout geral
+*/
+.site-header {width: 100%; text-align: center; background: #e1e1e1}
+.site-conteudo{ text-align: center;}
+.content-area{width: 1320px; display: inline-block; background: #ccc;}
+.site-footer{width: 100%; background: #e1e1e1}
+body{font-family: 'Roboto', sans-serif; }
+
+/*concerta
+*/
+
+.clearfix{clear: both; width: 100%;}
+
+/* Estilo tipografia
+*/
+a {
+	color: #6eb028; text-decoration: none;
+}
+
+a:visited {
+	color: #004a8c;
+}
+
+
+/*estilo do Banner de destaque
+*/
+.destaque-wrap {width: 100%;}
+.destaque-wrap div.destaque{float: left; display: block; position: relative; overflow: hidden;}
+.destaque-scrolled{width: 50%; float: left;}
+.destaque-wrap div.destaque:nth-child(1){width: 50%}
+.destaque-scrolled div.destaque:nth-child(1){width: 100%}
+.destaque-scrolled div.destaque:nth-child(2), .destaque-scrolled div.destaque:nth-child(3){width: 50%}
+.thumb-wrap {width: 100%; position: relative; height: 100%; overflow: hidden;}
+.destaque img{width: 100%; height: auto;}
+.destaque .txt-wrap { position: absolute; z-index: 1;bottom: 0;}
+.destaque h2{color: #fff; font-size: 1.8em; line-height: 1.25em}
+.destaque .txt-wrap{margin: 0 0 20px 20px; width: 80%; text-align: left;}
+.thumb-wrap a::before{
+		height: 100%;
+		width: 100%; display: block;
+		position: absolute; bottom: 0;
+		transition: background-color 0.3s ease 0s;
+		background: -webkit-linear-gradient(bottom, rgba(78,78,78,0.8) , rgba(78,78,78,0)); /* For Safari 5.1 to 6.0 */
+	  background: -o-linear-gradient(top, rgba(78,78,78,0.8) , rgba(78,78,78,0)); /* For Opera 11.1 to 12.0 */
+	  background: -moz-linear-gradient(top, rgba(78,78,78,0.8) , rgba(78,78,78,0)); /* For Firefox 3.6 to 15 */
+		background: linear-gradient(to top, rgba(78,78,78,0.8) , rgba(78,78,78,0)); /* Standard syntax */
+		content: '\00a0';}
+
+.thumb-wrap a {position: relative; display: block;}
