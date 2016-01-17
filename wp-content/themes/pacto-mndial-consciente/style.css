@@ -26,7 +26,7 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 */
 .site-header {width: 100%; text-align: center; background: #e1e1e1}
 .site-conteudo{ text-align: center;}
-.content-area{width: 1320px; display: inline-block; background: #ccc;}
+.content-area{width: 1320px; display: inline-block;}
 .site-footer{width: 100%; background: #e1e1e1}
 body{font-family: 'Roboto', sans-serif; }
 
@@ -45,10 +45,27 @@ a:visited {
 	color: #004a8c;
 }
 
+/* Estilo do Header e Navegação no topo do site
+*/
+.site-header{text-align: center;}
+.logo-img{width: 318px; height: auto;}
+.margin-wrap{width: 1320px;display: inline-block; position: relative;}
+a.logo-container{float: left; margin: 10px; }
+/*Navegação*/
+.barra-nav {float: right; bottom: 0; right: 0; position: absolute;}
+.menu-item{float: left; }
+.menu-item:last-child::after{width: 100%; clear:both;}
+.menu-item a{margin: 10px; font-size: 1.6em; color: #000000}
+#primary-menu{display: block;}
+#primary-menu li:nth-child(5n+1){border-bottom: 7px solid #ede019;}
+#primary-menu li:nth-child(5n+2){border-bottom: 7px solid #ff6210;}
+#primary-menu li:nth-child(5n+3){border-bottom: 7px solid #b72186;}
+#primary-menu li:nth-child(5n+4){border-bottom: 7px solid #6eb028;}
+#primary-menu li:nth-child(5n+5){border-bottom: 7px solid #004a8c;}
 
 /*estilo do Banner de destaque
 */
-.destaque-wrap {width: 100%;}
+.destaque-wrap {width: 100%; margin: 20px 0;}
 .destaque-wrap div.destaque{float: left; display: block; position: relative; overflow: hidden;}
 .destaque-scrolled{width: 50%; float: left;}
 .destaque-wrap div.destaque:nth-child(1){width: 50%}

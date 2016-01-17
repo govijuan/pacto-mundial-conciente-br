@@ -17,13 +17,15 @@
 	<body>
 		<div class="page">
 			<header class="site-header">
-				<a href="<?php echo home_url('/')?>" class="logo-container" rel="home" title="Pacto Mundial Consciente">
+				<div class="margin-wrap">
+					<a href="<?php echo home_url('/');?>" class="logo-container" rel="home" title="Pacto Mundial Consciente">
 					<img src="<?php echo get_option('govi_logo');?>" class="logo-img" />
-				</a>
-				<div class="marca-e-logo"></div>
-				<nav class="barra-nav">
-					<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
-				</nav>
+					</a>
+					<nav class="barra-nav">
+						<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+					</nav>
+				</div>
+				<div class="clearfix"></div>
 			</header>
 			<div class="site-conteudo">
 
