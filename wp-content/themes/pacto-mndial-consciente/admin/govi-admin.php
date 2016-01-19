@@ -96,8 +96,9 @@
 				<textarea id="our-analytics"><?php if( get_option('govi_analytics') == ""){ echo "Copie y pegue su c&oacute;digo de Google Analytics Aqu&iacute;!";} else { echo get_option('govi_analytics');} ?>
 				</textarea>
 
-				<div id="save-message-general" style="display:none"></div>
+				
 			</div> <!-- Close panel-body div -->
+			
 		</div>
 
 
@@ -125,7 +126,7 @@
 				<input type="text" id="our-whatsapp-numbr" name="our-whatsapp-numbr" value="<?php echo get_option('our_whatsapp'); ?>"/>
 				<label for="our-skype">Digitar/Colar nombre de usu&aacute;rio no Skype para contato:</label>
 				<input type="text" id="our-skype" name="our-skype" value="<?php echo get_option('our_skype'); ?>"/>
-				<label for="our-office-numbr">Digitar/Colar n&uacute;mero de telefone do escritório:</label>
+				<label for="our-office-numbr">Digitar/Colar n&uacute;mero de telefone do escrit&oacute;rio:</label>
 				<input type="text" id="our-office-numbr" name="our-office-numbr" value="<?php echo get_option('our_office_p_numbr'); ?>"/>
 				<label for="our-email">Digitar/Colar endere&ccedil;o de e-mail para contacto (Vai ativar automaticamente o programa-cliente de e-mail, tais como Outlook, Mozilla Thunderbird, Mail, etc.):</label>
 				<input type="text" id="our-email" name="our-email" value="<?php echo get_option('our_email'); ?>"/>
@@ -160,7 +161,7 @@
 				<input type="text" id="youtube-link" name="youtube-link" value="<?php echo get_option('govi_youtube_link'); ?>"/><br>
 			</div>
 		</div>
-
+		<div id="save-message-general" style="display:none"></div>
 	<?php
 	}
 
@@ -210,7 +211,7 @@
 					})
 					.success(function(){})
 					.error(function(){ alert("error");})
-					.complete(function(){ $('#save-message-general').html('Op&ccedil;&otilde;es Salvas!').hide(3000); });
+					.complete(function(){ $('#save-message-general').html('Op&ccedil;&otilde;es Salvas!').delay(2000).hide(3000); });
 				});
 			});
 

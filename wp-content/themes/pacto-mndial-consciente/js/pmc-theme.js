@@ -11,16 +11,19 @@
 		if(windowWidth >= 1320){
 			//escribir código de cuando es mayor o igual a 1320px
 			navbarWidth = marginWrapWidth - logoWidth;
+		}
+		else if((windowWidth < 1320) && (windowWidth > 980)){
+			navbarWidth = marginWrapWidth;
+		}
+		$('#primary-menu').css('width', navbarWidth + 'px');
 			NavLinksLength = $('#primary-menu li').length;
 			navLinksWidth = navbarWidth / NavLinksLength;
-			$('#primary-menu').css('width', navbarWidth + 'px');
 			$('#primary-menu li').css('width', navLinksWidth + 'px');
 			$('#primary-menu li:nth-child(5n+1) a').addClass('hvr-bounce-to-top-am');
 			$('#primary-menu li:nth-child(5n+2) a').addClass('hvr-bounce-to-top-lar');
 			$('#primary-menu li:nth-child(5n+3) a').addClass('hvr-bounce-to-top-fuc');
 			$('#primary-menu li:nth-child(5n+4) a').addClass('hvr-bounce-to-top-ver');
 			$('#primary-menu li:nth-child(5n+5) a').addClass('hvr-bounce-to-top-azu');
-		}
 	}
 	function destaqueItemsAnimation(){
 		//$('.destaque-wrap div:first-child').addClass('destaque-big');

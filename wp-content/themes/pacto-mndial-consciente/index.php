@@ -1,32 +1,4 @@
-<!DOCTYPE html>
-<html lang="pt">
-	<head>
-		<meta charset="utf-8" />
-		<title><?php bloginfo('title')?></title>
-		<link rel="icon" type="image/ico" href="<?php echo get_template_directory_uri(); ?>/favicon.ico">
-		<!--[if IE]>
-		<script src="http://html5shiv.googlecode.com/svn/trunk/	html5.js"></script><![endif]-->
-		<!--[if lte IE 7]>
-		<script src="js/IE8.js" type="text/javascript"></script><![endif]-->
-		<!--[if lt IE 7]>
-
-		<link rel="stylesheet" type="text/css" media="all" href="css/ie6.css"/><![endif]-->
-		<?php wp_head(); ?>
-	</head>
-
-	<body>
-		<div class="page">
-			<header class="site-header">
-				<div class="margin-wrap">
-					<a href="<?php echo home_url('/');?>" class="logo-container" rel="home" title="Pacto Mundial Consciente">
-					<img src="<?php echo get_option('govi_logo');?>" class="logo-img" />
-					</a>
-					<nav class="barra-nav">
-						<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
-					</nav>
-				</div>
-				<div class="clearfix"></div>
-			</header>
+			<?php get_header()?>
 			<div class="site-conteudo">
 
 				<div id="primary" class="content-area">
@@ -68,13 +40,4 @@
 				</div><!-- #primari-->
 
 			</div><!-- .site-conteudo -->
-			<footer class="site-footer">
-				<div class="informacoes-site">
-					<?php printf( esc_html__( '&copy; 2016 %1$s - Desenvolvido por %2$s.', 'pacto-mundial-consciente' ), 'Pacto Mundial Consciente Brasil', '<a href="http://jccriacaodesites.com/" rel="designer">JC Cria&ccedil;&atilde;o de Sites</a>' ); ?>
-				</div>
-			</footer><!--.site-footer -->
-		</div><!-- .page -->
-		<?php wp_footer(); ?>
-	</body>
-
-</html>
+			<?php get_footer()?>

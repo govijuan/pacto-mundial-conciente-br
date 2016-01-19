@@ -28,3 +28,4 @@ a.general-save-button:hover{background: #906ca2; color: #fff}
 .govi-element textarea{min-height: 100px;}
 .govi-element label{margin: 10px 0; display: block;}
 .govi-element input[type="button"]{background: #906ca2; color:#2f2f2f; height: 45px; border: none; width: 125px; text-align: center;}
+#save-message-general{background: rgba(255,255,255, 0.9); font-weight: 700; color:#6fbfb9; border-radius: 5px; top:300px; left: 300px; position: absolute; z-index: 20; padding: 20px 30px;}
