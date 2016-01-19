@@ -52,29 +52,35 @@ a:visited {
 .margin-wrap{width: 1320px;display: inline-block; position: relative;}
 a.logo-container{float: left; margin: 10px; }
 /*Navegação*/
-.barra-nav {float: right; bottom: 0; right: 0; position: absolute;}
+.barra-nav {float: right; bottom: -2px; right: 0; position: absolute;}
 .menu-item{float: left; }
 .menu-item:last-child::after{width: 100%; clear:both;}
-.menu-item a{margin: 10px; font-size: 1.6em; color: #000000}
+.menu-item a{ font-size: 1.6em; color: #000000; display: block; padding: 7px 0 0;}
 #primary-menu{display: block;}
-#primary-menu li:nth-child(5n+1){border-bottom: 7px solid #ede019;}
-#primary-menu li:nth-child(5n+2){border-bottom: 7px solid #ff6210;}
-#primary-menu li:nth-child(5n+3){border-bottom: 7px solid #b72186;}
-#primary-menu li:nth-child(5n+4){border-bottom: 7px solid #6eb028;}
-#primary-menu li:nth-child(5n+5){border-bottom: 7px solid #004a8c;}
+
+.hvr-bounce-to-top-am {border-bottom: solid #ede019; border-bottom-width: 8px; }
+.hvr-bounce-to-top-lar {border-bottom: solid #ff6210; border-bottom-width: 8px; }
+.hvr-bounce-to-top-fuc {border-bottom: solid #b72186; border-bottom-width: 8px; }
+.hvr-bounce-to-top-ver {border-bottom: solid #6eb028; border-bottom-width: 8px; }
+.hvr-bounce-to-top-azu {border-bottom: solid #004a8c; border-bottom-width: 8px; }
 
 /*estilo do Banner de destaque
 */
-.destaque-wrap {width: 100%; margin: 20px 0;}
+.destaque-wrap {width: 100%; margin: 20px 0; overflow: hidden;}
 .destaque-wrap div.destaque{float: left; display: block; position: relative; overflow: hidden;}
-.destaque-scrolled{width: 50%; float: left;}
-.destaque-wrap div.destaque:nth-child(1){width: 50%}
-.destaque-scrolled div.destaque:nth-child(1){width: 100%}
-.destaque-scrolled div.destaque:nth-child(2), .destaque-scrolled div.destaque:nth-child(3){width: 50%}
+
 .thumb-wrap {width: 100%; position: relative; height: 100%; overflow: hidden;}
-.destaque img{width: 100%; height: auto;}
-.destaque .txt-wrap { position: absolute; z-index: 1;bottom: 0;}
-.destaque h2{color: #fff; font-size: 1.8em; line-height: 1.25em}
+.destaque-wrap .destaque:nth-child(1) img, .destaque-scrolled:nth-child(2) img, .destaque-scrolled:nth-child(3) img{ height: auto; width: 112%; margin: 0; transition: width 0.5s, margin 0.5s}
+.destaque-scrolled:nth-child(1) img{ width: 143%!important;}
+.destaque .txt-wrap { position: absolute; z-index: 1;bottom: 0;     margin: 0 0 20px 20px; text-align: left;}
+.destaque h2{color: #fff; }
+.destaque-wrap div.destaque:nth-child(1) h2{font-size: 1.8em; line-height: 1.25em}
+.destaque-scrolled div.destaque:nth-child(1) h2{font-size: 1.7em; line-height: 1.20em}
+.destaque-scrolled div.destaque:nth-child(2) h2, .destaque-scrolled div.destaque:nth-child(3) h2 {font-size: 1.2em; line-height: 1.05em}
+	/*animacão das imagens do destaque*/
+.dest-hover-img{width: 120%!important; margin: -2% 0 0 -5%!important;}
+.
+
 .destaque .txt-wrap{margin: 0 0 20px 20px; width: 80%; text-align: left;}
 .thumb-wrap a::before{
 		height: 100%;
@@ -86,5 +92,17 @@ a.logo-container{float: left; margin: 10px; }
 	  background: -moz-linear-gradient(top, rgba(78,78,78,0.8) , rgba(78,78,78,0)); /* For Firefox 3.6 to 15 */
 		background: linear-gradient(to top, rgba(78,78,78,0.8) , rgba(78,78,78,0)); /* Standard syntax */
 		content: '\00a0';}
-
+.txt-categoria-dest a{color: #fff; background: #282828; padding: 4px 8px; font-size: 0.8em;}
+.txt-categoria-dest {margin:  0 0 10px 0}
 .thumb-wrap a {position: relative; display: block;}
+
+/*Comportamento Responsivo
+==========================================================================================*/
+
+@media(min-width: 1320px){
+	.destaque-scrolled{width: 50%; float: left;}
+	.destaque-wrap div.destaque:nth-child(1){width: 50%; height: 435px;}
+	.destaque-scrolled div.destaque:nth-child(1){ height: 236px; width: 100%;padding: 0 0 2px 0;margin: -2px 0 0 0;}
+	.destaque-scrolled div.destaque:nth-child(2), .destaque-scrolled div.destaque:nth-child(3){width: 50%; height: 199px;}
+	.destaque-scrolled, .destaque-scrolled div.destaque:nth-child(3){padding: 0 0 0 2px; margin:  0 -2px 0 0;}
+}
