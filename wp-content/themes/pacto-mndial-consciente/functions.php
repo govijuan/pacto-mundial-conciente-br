@@ -122,7 +122,8 @@ function pacto_mundial_consciente_scripts() {
 	wp_enqueue_style('foundation-icon-font', get_template_directory_uri() . '/fonts/foundation-icons.css');
 	wp_enqueue_style('roboto-font-styles', 'https://fonts.googleapis.com/css?family=Roboto:400,700,900,300,300italic ');
 	wp_enqueue_style('hover-styles', get_template_directory_uri() . '/css/hover.css');
-	wp_enqueue_script( 'pacto-mundial-consciente-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
+	wp_enqueue_style('slicknav-style', get_template_directory_uri() . '/css/slicknav.css');
+	wp_enqueue_script( 'pacto-mundial-consciente-navigation', get_template_directory_uri() . '/js/jquery.slicknav.js', array(), '20120206', true );
 	wp_enqueue_script( 'pacto-mundial-consciente-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
 	wp_enqueue_script( 'pacto-mundial-consciente-theme', get_template_directory_uri() . '/js/pmc-theme.js', array('jquery'), '', true );
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {

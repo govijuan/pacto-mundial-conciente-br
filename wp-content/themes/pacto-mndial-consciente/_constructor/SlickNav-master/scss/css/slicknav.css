@@ -60,11 +60,11 @@
 
 .slicknav_brand {
   float: left; }
-/*Cambio aqui*/
+
 .slicknav_menu {
   font-size: 16px;
   box-sizing: border-box;
-  background: #e1e1e1;
+  background: #4c4c4c;
   padding: 5px; }
   .slicknav_menu * {
     box-sizing: border-box; }
@@ -76,13 +76,13 @@
     background-color: white; }
 
 .slicknav_btn {
-  margin: 15px 5px 16px;
+  margin: 5px 5px 6px;
   text-decoration: none;
   text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
-  background-color: #3c7a93; }
+  background-color: #222222; }
 
 .slicknav_nav {
   color: white;

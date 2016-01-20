@@ -1,3 +1,8 @@
+/*!
+ * SlickNav Responsive Mobile Menu v1.0.3
+ * (c) 2015 Josh Cope
+ * licensed under MIT
+ */
 .slicknav_btn {
   position: relative;
   display: block;
@@ -60,32 +65,32 @@
 
 .slicknav_brand {
   float: left; }
-/*Cambio aqui*/
+
 .slicknav_menu {
   font-size: 16px;
   box-sizing: border-box;
-  background: #e1e1e1;
+  background: #4c4c4c;
   padding: 5px; }
   .slicknav_menu * {
     box-sizing: border-box; }
   .slicknav_menu .slicknav_menutxt {
-    color: white;
+    color: #fff;
     font-weight: bold;
-    text-shadow: 0 1px 3px black; }
+    text-shadow: 0 1px 3px #000; }
   .slicknav_menu .slicknav_icon-bar {
-    background-color: white; }
+    background-color: #fff; }
 
 .slicknav_btn {
-  margin: 15px 5px 16px;
+  margin: 5px 5px 6px;
   text-decoration: none;
   text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
-  background-color: #3c7a93; }
+  background-color: #222; }
 
 .slicknav_nav {
-  color: white;
+  color: #fff;
   margin: 0;
   padding: 0;
   font-size: 0.875em;
@@ -103,19 +108,19 @@
       -webkit-border-radius: 6px;
       -moz-border-radius: 6px;
       border-radius: 6px;
-      background: #cccccc;
-      color: white; }
+      background: #ccc;
+      color: #fff; }
   .slicknav_nav a {
     padding: 5px 10px;
     margin: 2px 5px;
     text-decoration: none;
-    color: white; }
+    color: #fff; }
     .slicknav_nav a:hover {
       -webkit-border-radius: 6px;
       -moz-border-radius: 6px;
       border-radius: 6px;
-      background: #cccccc;
-      color: #222222; }
+      background: #ccc;
+      color: #222; }
   .slicknav_nav .slicknav_txtnode {
     margin-left: 15px; }
   .slicknav_nav .slicknav_item a {
@@ -126,7 +131,7 @@
     margin: 0; }
 
 .slicknav_brand {
-  color: white;
+  color: #fff;
   font-size: 18px;
   line-height: 30px;
   padding: 7px 12px;
