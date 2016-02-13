@@ -1,0 +1,15 @@
+.tribe-list-widget li{ height: 200px; margin: 10px 0;}
+.tribe-events-event-image{height: 200px; width: 200px; display: block; overflow: hidden; }
+.tribe-events-event-image a img{width: 100%;height: auto;}
+.cont-txt-evt{text-align: left;}
+.cont-txt-evt .exerp-evt{text-align: justify;}
+.tribe-list-widget{padding: 0 10px;}
+.tribe-event-title{font-family: Roboto,Helvetica,Arial,sans-serif; font-weight: 700; font-size: 150%;}
+.tribe-event-title a{color: #000;}
+.tribe-event-duration{font-size: 12px; font-weight: 700; text-align: right;}
+li.tribe-events-list-widget-events:nth-child(odd) div.tribe-event-duration{color: #004a8c;}
+li.tribe-events-list-widget-events:nth-child(even) div.tribe-event-duration{color: #6eb028;}
+li.tribe-events-list-widget-events div.tribe-event-duration{position: absolute; right: 10px;}
+@media (min-width: 980px) and (max-width: 1319px){
+	.cont-txt-evt h4, .cont-txt-evt .exerp-evt{margin: 0 0 0 14px;}
+}

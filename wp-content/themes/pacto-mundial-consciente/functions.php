@@ -7,6 +7,44 @@
  * @package Pacto_Mundial_Consciente
  */
 
+/**
+*Creates a new custom type for the events shown in the home page
+*/
+
+function create_post_types() {
+	/*register_post_type('eventos',
+		array(	'labels' => array(
+									'name' => __('Eventos'),
+									'singular_name' => __( 'Evento' ),
+									'add_new' =>__('Adicionar Novo Evento'),
+									'all_items' => __( 'Todos os Eventos' )	
+								),
+				'taxonomies' => array('category'),
+			    'public' => true,
+			    'has_archive' => true,
+			    'rewrite' => array('slug' => 'proyectos'),
+			    'publicly_queryable' => true,
+			    'show_ui' => true,
+			    'show_in_nav_menus' => true,
+			    'show_in_menu' => true
+		)
+		
+	);*/
+	 
+ }
+
+register_sidebar(array(
+	'name' => __('Campo para Eventos'),
+	'id' => 'campo-eventos-home',
+	'description'   => '',
+	'before_widget' => '<div class="eventos-como-sidebar">',
+	'after_widget' => '</div>',
+	'before_title'  => '<h2 class="widgettitle">',
+	'after_title'   => '</h2>'
+
+));
+
+add_action('init', 'create_post_types');
 if ( ! function_exists( 'pacto_mundial_consciente_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
@@ -15,6 +53,8 @@ if ( ! function_exists( 'pacto_mundial_consciente_setup' ) ) :
  * runs before the init hook. The init hook is too late for some features, such
  * as indicating support for post thumbnails.
  */
+ 
+
 function pacto_mundial_consciente_setup() {
 	/*
 	 * Make theme available for translation.
@@ -79,6 +119,7 @@ add_theme_support( 'custom-background', apply_filters( 'pacto_mundial_consciente
 	) ) );
 */
 }
+add_image_size('miniatura-eventos', 400, 400, array( 'center', 'center' ));
 endif;
 add_action( 'after_setup_theme', 'pacto_mundial_consciente_setup' );
 
@@ -120,6 +161,7 @@ function pacto_mundial_consciente_scripts() {
 	wp_enqueue_style( 'pacto-mundial-consciente-style', get_stylesheet_uri() );
 	wp_enqueue_style('pmc-content-sidebar',  get_template_directory_uri() . '/layouts/content-sidebar.css');
 	wp_enqueue_style('foundation-icon-font', get_template_directory_uri() . '/fonts/foundation-icons.css');
+	wp_enqueue_style('bootstrap-styles', get_template_directory_uri() . '/css/bootstrap.css');
 	wp_enqueue_style('roboto-font-styles', 'https://fonts.googleapis.com/css?family=Roboto:400,700,900,300,300italic ');
 	wp_enqueue_style('hover-styles', get_template_directory_uri() . '/css/hover.css');
 	wp_enqueue_style('slicknav-style', get_template_directory_uri() . '/css/slicknav.css');
@@ -131,6 +173,15 @@ function pacto_mundial_consciente_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'pacto_mundial_consciente_scripts' );
+
+/*Customization of the Events calendar's stylesheet
+--------------------------------------------------------------*/
+
+function replace_tribe_events_calendar_stylesheet() {
+   $styleUrl = get_bloginfo('template_url') . '/css/custom-events-stylesheet.css';
+   return $styleUrl;
+}
+add_filter('tribe_events_stylesheet_url', 'replace_tribe_events_calendar_stylesheet');
 
 /**
  * Implement the Custom Header feature.

@@ -37,25 +37,30 @@ if ( $posts ) : ?>
 		foreach ( $posts as $post ) :
 			setup_postdata( $post );
 			?>
-			<li class="tribe-events-list-widget-events <?php tribe_events_event_classes() ?>">
+			<li class="tribe-events-list-widget-events row <?php tribe_events_event_classes() ?>">
 
 				<?php do_action( 'tribe_events_list_widget_before_the_event_title' ); ?>
-				<!-- Event Title -->
-				<h4 class="tribe-event-title">
-					<a href="<?php echo esc_url( tribe_get_event_link() ); ?>" rel="bookmark"><?php the_title(); ?></a>
-				</h4>
-				<div class="cont-img-etv">
-					<?php echo tribe_event_featured_image( null, 'medium' ) ?>
+				
+				<div class="cont-img-etv col col-lg-4 col-md-5">
+					<?php echo tribe_event_featured_image( null, 'miniatura-eventos' ) ?>
 				</div>
-				<div class="exerp-evt">
-					<?php echo tribe_events_get_the_excerpt(); ?>
+				<div class="cont-txt-evt col col-lg-5 col-md-7">
+				<!-- Event Title -->
+					<h4 class="tribe-event-title">
+						<a href="<?php echo esc_url( tribe_get_event_link() ); ?>" rel="bookmark"><?php the_title(); ?></a>
+					</h4>
+					
+					<div class="exerp-evt no-pmc-2">
+						<?php echo tribe_events_get_the_excerpt(); ?>
+					</div>
 				</div>
 				<?php do_action( 'tribe_events_list_widget_after_the_event_title' ); ?>
+				
 				<!-- Event Time -->
 
 				<?php do_action( 'tribe_events_list_widget_before_the_meta' ) ?>
 
-				<div class="tribe-event-duration">
+				<div class="tribe-event-duration col col-lg-3 col-md-3">
 					<?php echo tribe_events_event_schedule_details(); ?>
 				</div>
 

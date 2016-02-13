@@ -70,6 +70,13 @@ function centerLogoMobile(){
 		$('a.logo-container').css('left', logoLeftDist + 'px');
 	}
 }
+
+function pmcScrollToTop(){
+	$('#toTop').click(function(){
+		$("html, body").animate({ scrollTop: 0 }, 600);
+        return false;
+	});
+}
 	$(document).ready(function($){
 	//jQuery('div.destaque-wrap div.destaque:nth-child(2), div.destaque-wrap div.destaque:nth-child(3), div.destaque-wrap div.destaque:nth-child(4)').addClass('destaque-scrolled');
 	$('.destaque-wrap div.destaque:nth-child(2), .destaque-wrap div.destaque:nth-child(3), .destaque-wrap div.destaque:nth-child(4)').wrapAll('<div class="destaque-scrolled"></div>');
@@ -77,6 +84,7 @@ function centerLogoMobile(){
 	destaqueItemsAnimation();
 	setSlickNav();
 	centerLogoMobile();
+	pmcScrollToTop();
 
 	});
 

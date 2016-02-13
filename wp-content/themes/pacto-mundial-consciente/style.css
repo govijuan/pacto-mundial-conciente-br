@@ -27,8 +27,7 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 .site-header {width: 100%; text-align: center; background: #e1e1e1}
 .site-conteudo{ text-align: center;}
 .content-area{ display: inline-block;}
-.site-footer{width: 100%; background: #e1e1e1}
-body{font-family: 'Roboto', sans-serif; }
+.site-footer{width: 100%; background: #e1e1e1; height: 70px; text-align: center;}
 
 /*concerta
 */
@@ -47,7 +46,6 @@ a:visited {
 
 /* Estilo do Header e Navegação no topo do site
 */
-.site-header{text-align: center;}
 .margin-wrap{display: inline-block; position: relative;}
 a.logo-container{float: left; margin: 10px; }
 /*Navegação*/
@@ -62,6 +60,11 @@ a.logo-container{float: left; margin: 10px; }
 .hvr-bounce-to-top-fuc {border-bottom: solid #b72186; border-bottom-width: 8px; }
 .hvr-bounce-to-top-ver {border-bottom: solid #6eb028; border-bottom-width: 8px; }
 .hvr-bounce-to-top-azu {border-bottom: solid #004a8c; border-bottom-width: 8px; }
+
+/* estilos do footer
+-------------------------------------------------------------------------------------*/
+.informacoes-site{border-bottom: 5px; position: relative;}
+.volta-acima{height: 30px; margin: 0 0 10px; position: relative; padding: 10px 0 0; cursor: pointer;}
 /*Midias Sociais no Header*/
 
 .contact-email-link{color:#b72186;}
@@ -103,6 +106,22 @@ a.logo-container{float: left; margin: 10px; }
 .txt-categoria-dest {margin:  0 0 10px 0}
 .thumb-wrap a {position: relative; display: block;}
 
+/*Estilo para Eventos Na Home
+==========================================================================================*/
+.eventos-wrap h2{color: #FF6212; padding: 0 10px;}
+.eventos-wrap h2:after{border-bottom: 2px solid #FF6212; content: ' ';width: 102%; display: block; margin: 0 0 0 -1%; }
+/*.eventos-wrap {background: -webkit-linear-gradient(#77addb 0%, #259f66 100%);}*/
+.videos-wrap h2, .visite-wrap h2{color: #b82286; }
+.videos-wrap {background: -webkit-linear-gradient(#c2dd0e 0%, #8aff2f 100%)}
+.amigos-wrap h2{color: #004a8c;}
+.amigos-wrap{background: -webkit-linear-gradient(#e9f629 0%, #aeaaaa 100%)}
+.ativistas-wrap h2{color: #ff6210;}
+.ativistas-wrap{background: -webkit-linear-gradient(#afbcf0 0%, #d5cbcb 100%)}
+.visite-wrap{background: -webkit-linear-gradient(#3eee55 0%, #c6f6ae 100%) }
+.garimpo-wrap h2{color: #6eb028; text-align: left;}
+.garimpo-wrap{background: -webkit-linear-gradient(#f08c8c 0%, #ad8c8c 100%)}
+.eventos-wrap h2, .videos-wrap h2, .amigos-wrap h2, .ativistas-wrap h2, .garimpo-wrap h2{text-align: left;}
+
 /*Comportamento Responsivo
 ==========================================================================================*/
 
@@ -112,7 +131,7 @@ a.logo-container{float: left; margin: 10px; }
 	.destaque-scrolled{width: 50%; float: left;}
 	.destaque-wrap div.destaque:nth-child(1){width: 50%; height: 435px;}
 	.destaque-scrolled div.destaque:nth-child(1){ height: 236px; width: 100%;padding: 0 0 2px 0;margin: -2px 0 0 0;}
-	.destaque-scrolled div.destaque:nth-child(2), .destaque-scrolled div.destaque:nth-child(3){width: 50%; height: 199px;}
+	.destaque-scrolled div.destaque:nth-child(2), .destaque-scrolled div.destaque:nth-child(3){width: 50%; height: 201px;}
 	.destaque-scrolled, .destaque-scrolled div.destaque:nth-child(3){padding: 0 0 0 2px; margin:  0 -2px 0 0;}
 	.destaque-wrap .destaque:nth-child(1) img, .destaque-scrolled:nth-child(2) img, .destaque-scrolled:nth-child(3) img{ height: auto; width: 112%; margin: 0; transition: width 0.5s, margin 0.5s}
 	.dest-hover-img{width: 120%!important; margin: -2% 0 0 -5%!important;}
@@ -124,7 +143,7 @@ a.logo-container{float: left; margin: 10px; }
 	.destaque-scrolled{width: 50%; float: left;}
 	.destaque-wrap div.destaque:nth-child(1){width: 50%; height: 412px;}
 	.destaque-scrolled div.destaque:nth-child(1){ height: 236px; width: 100%;padding: 0 0 2px 0;margin: -2px 0 0 0;}
-	.destaque-scrolled div.destaque:nth-child(2), .destaque-scrolled div.destaque:nth-child(3){width: 50%; height: 176px;}
+	.destaque-scrolled div.destaque:nth-child(2), .destaque-scrolled div.destaque:nth-child(3){width: 50%; height: 178px;}
 	.destaque-scrolled, .destaque-scrolled div.destaque:nth-child(3){padding: 0 0 0 2px; margin:  0 -2px 0 0;}
 	.destaque-wrap > .destaque:nth-child(1) img{ height: auto; width: 112%; margin: 0; transition: width 0.5s, margin 0.5s}
 	.destaque-scrolled .destaque img{height: 110%; width: auto; margin: -2% 0 0 -10%; transition: height 0.5s, margin 0.5s; }
