@@ -110,17 +110,35 @@ a.logo-container{float: left; margin: 10px; }
 ==========================================================================================*/
 .eventos-wrap h2{color: #FF6212; padding: 0 10px;}
 .eventos-wrap h2:after{border-bottom: 2px solid #FF6212; content: ' ';width: 102%; display: block; margin: 0 0 0 -1%; }
-/*.eventos-wrap {background: -webkit-linear-gradient(#77addb 0%, #259f66 100%);}*/
-.videos-wrap h2, .visite-wrap h2{color: #b82286; }
-.videos-wrap {background: -webkit-linear-gradient(#c2dd0e 0%, #8aff2f 100%)}
-.amigos-wrap h2{color: #004a8c;}
-.amigos-wrap{background: -webkit-linear-gradient(#e9f629 0%, #aeaaaa 100%)}
-.ativistas-wrap h2{color: #ff6210;}
-.ativistas-wrap{background: -webkit-linear-gradient(#afbcf0 0%, #d5cbcb 100%)}
-.visite-wrap{background: -webkit-linear-gradient(#3eee55 0%, #c6f6ae 100%) }
+
+/*Estilo para Vídeos Na Home
+==========================================================================================*/
+.video-wrap iframe{padding: 0 5px;}
+.videos-wrap h2, .visite-wrap h2{color: #b82286; padding: 0 10px;}
+.videos-wrap h2:after{border-bottom: 2px solid #b82286; content: ' ';width: 102%; display: block; margin: 0 0 0 -1%; }
+
+/*Estilo para Amigos Na Home
+==========================================================================================*/
+.amigos-wrap h2{color: #004a8c; padding: 0 10px; }
+.amigos-wrap{}
+.amigos-wrap h2:after { border-bottom: 2px solid #004a8c; content: ' '; word-break: 102%; display: block; margin: 0 0 0 -1%; }
+.amigo-thumb-wrap img{ width: 75%; height: auto; padding: 0 5px; }
+.carousel-control { padding-top:10%; width:5%; }
+
+.ativistas-wrap h2{color: #ff6210; padding: 0 10px;}
+.ativistas-wrap h2:after {border-bottom: 2px solid #ff6210; content: ' '; word-break: 102%; display: block; margin: 0 0 0 -1%;}
+.ativistas-wrap{}
+
+.visite-wrap h2:after{border-bottom: 2px solid #b82286; content: ' '; word-break: 102%; display: block; margin: 0 0 0 -1%;}
+
+.photogrid a img{width: 100%; height: auto; padding: 0 2.5px;}
+
+/*Estilo para Garimpo Na Home
+==========================================================================================*/
 .garimpo-wrap h2{color: #6eb028; text-align: left;}
-.garimpo-wrap{background: -webkit-linear-gradient(#f08c8c 0%, #ad8c8c 100%)}
+.garimpo-wrap h2:after{border-bottom: 2px solid #6eb028; content: ' '; word-break: 102%; display: block; margin: 0 0 0 -1%;}
 .eventos-wrap h2, .videos-wrap h2, .amigos-wrap h2, .ativistas-wrap h2, .garimpo-wrap h2{text-align: left;}
+.gar-link-img-wrap, .gar-link-title-wrap{ width: calc(100% - 10px);}
 
 /*Comportamento Responsivo
 ==========================================================================================*/
@@ -171,4 +189,42 @@ a.logo-container{float: left; margin: 10px; }
 	.social-midia-on-h a{margin: 0 0 0 20px;}
 	.contact-email-link, .facebook-link, .twitter-link{display: inline-block; line-height: 1; font-size: 60px; text-shadow:none; transition: text-shadow 0.3s}
 	.menu-item{float: left; }
+}
+
+
+/*=========================================================================
+	** Extensão do Bootstrap **
+  =========================================================================*/
+  
+.col-xs-15,
+.col-sm-15,
+.col-md-15,
+.col-lg-15 {
+    position: relative;
+    min-height: 1px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.col-xs-15 {
+    width: 20%!important;
+    float: left!important;
+}
+@media (min-width: 768px) {
+.col-sm-15 {
+        width: 20%!important;
+        float: left!important;
+    }
+}
+@media (min-width: 980px) {
+    .col-md-15 {
+        width: 20%!important;
+        float: left!important;
+    }
+}
+@media (min-width: 1320px) {
+    .col-lg-15 {
+        width: 20%!important;
+        float: left!important;
+    }
 }

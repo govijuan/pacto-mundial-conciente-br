@@ -77,6 +77,26 @@ function pmcScrollToTop(){
         return false;
 	});
 }
+
+function wrapAmigosForSlider(){
+	var divs = $('div.homeCarrousel div.carousel-inner > article');
+    for(var i = 0; i < divs.length; i+=4) {
+      divs.slice(i, i+4).wrapAll('<div class="item"></div>');
+    }
+    $('div.homeCarrousel div.carousel-inner div.item:first-child').addClass('active');
+}
+
+function setAmigosSlideset(){
+	$('.homeCarrousel').carousel({
+		interval: 10000
+	});
+}
+
+function activaAtivistasTooltips(){
+	$('[data-toggle="tooltip"]').tooltip({
+		animation: true
+	});
+}
 	$(document).ready(function($){
 	//jQuery('div.destaque-wrap div.destaque:nth-child(2), div.destaque-wrap div.destaque:nth-child(3), div.destaque-wrap div.destaque:nth-child(4)').addClass('destaque-scrolled');
 	$('.destaque-wrap div.destaque:nth-child(2), .destaque-wrap div.destaque:nth-child(3), .destaque-wrap div.destaque:nth-child(4)').wrapAll('<div class="destaque-scrolled"></div>');
@@ -84,8 +104,10 @@ function pmcScrollToTop(){
 	destaqueItemsAnimation();
 	setSlickNav();
 	centerLogoMobile();
+	wrapAmigosForSlider();
+	setAmigosSlideset();
 	pmcScrollToTop();
-
+	activaAtivistasTooltips();
 	});
 
 	$(window).resize(function(){

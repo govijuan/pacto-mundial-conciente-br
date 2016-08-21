@@ -12,24 +12,106 @@
 */
 
 function create_post_types() {
-	/*register_post_type('eventos',
+	register_post_type('videos',
 		array(	'labels' => array(
-									'name' => __('Eventos'),
-									'singular_name' => __( 'Evento' ),
-									'add_new' =>__('Adicionar Novo Evento'),
-									'all_items' => __( 'Todos os Eventos' )	
+									'name' => __('V&iacute;deos'),
+									'singular_name' => __( 'V&iacute;deo' ),
+									'add_new' =>__('Adicionar Novo V&iacute;deo'),
+									'add_new_item' => __('Adicionar Novo V&iacute;deo'),
+									'all_items' => __( 'Todos os V&iacute;deos' )	
 								),
 				'taxonomies' => array('category'),
 			    'public' => true,
 			    'has_archive' => true,
-			    'rewrite' => array('slug' => 'proyectos'),
+			    'rewrite' => array('slug' => 'videos'),
 			    'publicly_queryable' => true,
 			    'show_ui' => true,
+			    'menu_position' => '2',
 			    'show_in_nav_menus' => true,
 			    'show_in_menu' => true
 		)
 		
-	);*/
+	);
+	register_post_type('links',
+		array(	'labels' => array (
+									'name' => __('Garimpo'),
+									'singular_name' => __('Link'),
+									'add_new' => __('Adicionar Novo Link'),
+									'add_new_item' => __('Adicionar Novo Link'),
+									'all_items' => __('Todos os Links')
+								),
+				'show_ui' => true,
+				'public' => true,
+				'has_archive' => false,
+				'rewrite' => array('slug' => 'links'),
+				'publicly_queryable' => true,
+				'menu_position' => '3',
+				'show_in_nav_menus' => true,
+				'show_in_menu' => true,
+				'supports'      => array( 'title',  'thumbnail' )
+				
+		)
+	);
+	
+	register_post_type(	'amigos',
+		array( 	'labels' => array( 	'name'=> __('Amigos'),
+									'singilar_name' => __('Amigo'),
+									'add_new' => __('Adicionar Novo Amigo'),
+									'add_new_item' => __('Adicionar Novo Amigo'),
+									'all_items' => __('Todos os Amigos')
+								), 	
+							
+				'show_ui' => true,
+				'public' => true,
+				'has_archive' => true,
+				'rewrite' => array('slug' => 'amigos'),
+				'publicly_queryable' => true,
+				'menu_position' => '4',
+				'show_in_nav_menus' => true,
+				'show_in_menu' => true,
+				'supports'     => array( 'title', 'editor', 'thumbnail', 'comments') 
+		)
+	);
+	
+	register_post_type(	'activistas',
+		array( 	'labels' => array( 	'name'=> __('Activistas'),
+									'singilar_name' => __('Activista'),
+									'add_new' => __('Adicionar Novo Activista'),
+									'add_new_item' => __('Adicionar Novo Activista'),
+									'all_items' => __('Todos os Activistas')
+								), 	
+							
+				'show_ui' => true,
+				'public' => true,
+				'has_archive' => true,
+				'rewrite' => array('slug' => 'activistas'),
+				'publicly_queryable' => true,
+				'menu_position' => '5',
+				'show_in_nav_menus' => true,
+				'show_in_menu' => true,
+				'supports'     => array( 'title', 'editor', 'thumbnail', 'comments') 
+		)
+	);
+	
+	register_post_type(	'visite',
+		array( 	'labels' => array( 	'name'=> __('Visite'),
+									'singilar_name' => __('Parceiro'),
+									'add_new' => __('Adicionar Novo Parceiro'),
+									'add_new_item' => __('Adicionar Novo Parceiro'),
+									'all_items' => __('Todos os Parceiros')
+								), 	
+							
+				'show_ui' => true,
+				'public' => true,
+				'has_archive' => true,
+				'rewrite' => array('slug' => 'parceros'),
+				'publicly_queryable' => true,
+				'menu_position' => '6',
+				'show_in_nav_menus' => true,
+				'show_in_menu' => true,
+				'supports'     => array( 'title',  'thumbnail') 
+		)
+	);
 	 
  }
 
@@ -66,6 +148,8 @@ function pacto_mundial_consciente_setup() {
 
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
+	add_theme_support( 'excerpt' );
+	add_post_type_support( 'videos', 'excerpt' );
 
 	/*
 	 * Let WordPress manage the document title.
@@ -120,6 +204,7 @@ add_theme_support( 'custom-background', apply_filters( 'pacto_mundial_consciente
 */
 }
 add_image_size('miniatura-eventos', 400, 400, array( 'center', 'center' ));
+add_image_size('miniatura-garimpo', 320, 186, array('center', 'center'));
 endif;
 add_action( 'after_setup_theme', 'pacto_mundial_consciente_setup' );
 
