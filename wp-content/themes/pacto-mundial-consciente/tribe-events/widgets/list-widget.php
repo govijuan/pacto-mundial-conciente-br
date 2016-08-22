@@ -42,9 +42,9 @@ if ( $posts ) : ?>
 				<?php do_action( 'tribe_events_list_widget_before_the_event_title' ); ?>
 				
 				<div class="cont-img-etv col col-lg-4 col-md-5">
-					<?php echo tribe_event_featured_image( null, 'miniatura-eventos' ) ?>
+					<?php if(tribe_event_featured_image()) {echo tribe_event_featured_image( null, 'miniatura-eventos' );} else {echo "<div class='tribe-events-event-image'><a href='".tribe_events_get_the_excerpt()."'><img src='".get_template_directory_uri()."/images/evento-default-img.jpg' width='200' height='200' class='attachment-miniatura-eventos size-miniatura-eventos wp-post-image'/></a></div>";} ;?>
 				</div>
-				<div class="cont-txt-evt col col-lg-5 col-md-7">
+				<div class="cont-txt-evt col col-lg-5 col-md-7" style="padding:0 10px 0 0">
 				<!-- Event Title -->
 					<h4 class="tribe-event-title">
 						<a href="<?php echo esc_url( tribe_get_event_link() ); ?>" rel="bookmark"><?php the_title(); ?></a>
